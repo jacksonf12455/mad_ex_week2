@@ -45,9 +45,6 @@
  */
 
 function accountGenerator(accountName, initBalance) {
-  return function addBalance(amount){
-    return `You deposited ${amount} to your ${accountName} Account and the current balance is ${initBalance+=amount}.`;
-  }  
 
 }
 
@@ -73,21 +70,7 @@ function accountGenerator(accountName, initBalance) {
 function distributeTips(...args) {
   // Your implementation here
 
-  //example demo solution
-  let foodTotal =0;
-  let drinksTotal = 0;
-  for (let i = 0; i<args.length; i++){
-  
-    //Ensure that the tips are evenly distributed
-    if(i % 2 === 0){
-      foodTotal += args[i]
-    }else{
-      drinksTotal += args[i];
-    }
-   
-  }
-  return {food:foodTotal, drink:drinksTotal}
-  
+
 }
 
 /**
@@ -119,9 +102,7 @@ function distributeTips(...args) {
 
 function greetingGenerator(defaultGreeting = "Hello") {
   // Your implementation here
-  return function Greeting(name, greeting=defaultGreeting){
-    return `${greeting}, ${name}!`
-  }
+ 
   
 
 }
@@ -147,13 +128,7 @@ function greetingGenerator(defaultGreeting = "Hello") {
 
 function mergeAndExtract(array1, array2) {
   // Your implementation here
-  const merged_arr = [...array1, ...array2];
 
-  const [first, second] = merged_arr;
-
-  const [remaining] = merged_arr.slice(2,merged_arr.length)
-
-  return {first, remaining:[remaining], second}
 }
 
 /**
